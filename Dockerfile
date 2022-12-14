@@ -11,7 +11,7 @@ COPY . .
 
 EXPOSE 9876
 
-RUN npm run build
+RUN npm ci
 
 CMD ["node", "dist/index.js"]
 
