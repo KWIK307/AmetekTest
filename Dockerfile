@@ -8,8 +8,9 @@ RUN npm install
 
 COPY . ./
 
+EXPOSE 9876
+
 RUN npm run build
 
 CMD ["node", "dist/index.js"]
 
-EXPOSE 9876
