@@ -7,8 +7,6 @@ COPY package*.json .
 
 RUN npm install
 
-COPY . .
-
 EXPOSE 9876
 
 RUN npm run build
