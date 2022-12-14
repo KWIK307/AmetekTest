@@ -2,14 +2,14 @@ FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY . ./
 
 RUN npm run build
 
 CMD ["node", "dist/index.js"]
 
-EXPOSE 9876:9876
+EXPOSE 9876
