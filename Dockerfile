@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . ./
 
-EXPOSE 9876
+EXPOSE 9876:9876
 
 RUN npm run build
 
