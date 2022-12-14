@@ -7,11 +7,11 @@ COPY package*.json .
 
 RUN npm install
 
-COPY . ./
+COPY . .
 
 EXPOSE 9876
 
-RUN npm ci
+RUN npm run build
 
 CMD ["node", "dist/index.js"]
 
