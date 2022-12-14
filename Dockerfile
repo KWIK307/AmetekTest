@@ -11,7 +11,7 @@ COPY . .
 
 EXPOSE 9876
 
-RUN npm run ts-build
+RUN npm run build
 
 CMD ["node", "dist/index.js"]
 
