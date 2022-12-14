@@ -9,9 +9,9 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
-
 EXPOSE 9876
+
+RUN npm run ts-build
 
 CMD ["node", "dist/index.js"]
 
