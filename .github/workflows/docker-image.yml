@@ -5,14 +5,14 @@ on:
     branches:  [ "main" ]
   pull_request:
     branches:  [ "main" ]
-
+    
+  workflow_dispatch:
+  
 jobs:
+ build-container:
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v3
+   - name: Build the Docker image
+     run: docker build --platform linux/arm/v7 . --file Dockerfile --tag my-image-name:"FizzBuzz"
 
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:"FizzBuzz"
