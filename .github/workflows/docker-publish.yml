@@ -8,7 +8,7 @@ on:
 jobs:
   push_to_registry:
     name: Build Docker Image
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       -
         name: Check out the repo
@@ -31,3 +31,4 @@ jobs:
           pull: true
           cache-from: type=gha
           cache-to: type=gha
+          
